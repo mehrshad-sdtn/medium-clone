@@ -23,8 +23,8 @@
           <li class= "ml-4 mr-2"> Sign In <li>
        </ul>
       </div>
-      <div class="bg-red-500 h-10 w-10">
-
+      <div class="h-10 w-10 mt-2 ml-4">
+       <button class="text-white bg-black rounded-full h-8 w-24" type="button"> Get started </button>
       </div>
 
 
