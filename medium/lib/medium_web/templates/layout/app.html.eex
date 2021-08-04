@@ -11,20 +11,14 @@
   </head>
    <body class="bg-white w-full">
 
-    <header class="bg-blue-200 w-full h-20 text-yellow-400 border-b border-black pb-4 pt-4 flex">
-      <div class="ml-16">
-           <img src="<%= Routes.static_path(@conn, "/images/medium-logo.png") %>" style="width:179px; height:45px;">
+    <header class="bg-blue-200 w-full h-20 border-b border-black flex">
+      <div class="container w-6/12 pt-4 " >
+           <img src="<%= Routes.static_path(@conn, "/images/medium-logo.png") %>" class="float-left ml-16" style="width:179px; height:45px;">
       </div>
-      <div class= "h-10 mt-1 ml-56 text-sm">
-       <ul class= "text-black flex pl-4 pt-2 font-normal">
-          <li class= "ml-4 mr-2"> Our story <li>
-          <li class= "ml-4 mr-2"> Membership <li>
-          <li class= "ml-4 mr-2"> Write <li>
-          <li class= "ml-4 mr-2"> Sign In <li>
-       </ul>
-      </div>
-      <div class="h-10 w-10 mt-2 ml-4">
-       <button class="text-white bg-black rounded-full text-sm h-8 w-24" type="button"> Get started </button>
+
+
+      <div class="container w-6/12 text-sm">
+        <button class= "float-right mr-16 mt-2 text-white rounded-full bg-black w-28 h-10 mt-4" type="button"> Get started </button>
       </div>
 
 
