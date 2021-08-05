@@ -17,7 +17,10 @@ defmodule MediumWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/:user_id", UserController, :index
+
   end
+
 
   scope "/auth", MediumWeb do
     pipe_through :browser

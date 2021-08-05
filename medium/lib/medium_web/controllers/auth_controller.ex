@@ -52,9 +52,13 @@ defmodule MediumWeb.AuthController do
   defp insert_or_update(changeset) do
     case Repo.get_by(User, email: changeset.changes.email) do
       #if the email in the changeset already exists
-      nil -> Repo.insert(changeset)
+      nil -> signup(changeset)
       user -> {:ok, user}
     end
+  end
+
+  defp signup(changeset) do
+    Repo.insert(changeset)
   end
 
 
