@@ -37,7 +37,7 @@ defmodule MediumWeb.AuthController do
         conn
         |> put_flash(:info, "Welcome")
         |> put_session(:user_id, user.id) #create a session with users id
-        |> redirect(to: "/")
+        |> redirect(to: Routes.user_path(conn, :index, user.id))
 
 
       {:error, _reason} ->

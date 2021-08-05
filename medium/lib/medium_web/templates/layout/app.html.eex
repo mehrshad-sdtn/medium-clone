@@ -23,8 +23,7 @@
           <li class="mt-6 ml-4">
             <button class="p-1 bg-white w-24 h-9 text-sm rounded-full text-black border border-black hover:border-blue-400 hover:text-blue-400"
             type="button">
-
-            Sign Out
+            <%= link "Sign Out", to: Routes.page_path(@conn, :index) %>
 
             </button>
           </li>
@@ -44,6 +43,6 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= @inner_content %>
     </main>
-    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/landing.js") %>"></script>
+
   </body>
 </html>
