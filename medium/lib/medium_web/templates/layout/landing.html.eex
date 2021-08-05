@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Medium · Phoenix Framework</title>
+    <title>Medium clone</title>
     <!--<link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>-->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
@@ -21,7 +21,10 @@
       <div class="container w-6/12 text-sm font-sans">
         <ul class= "float-right flex mr-14">
           <li class="mt-7 ml-4">
-           <button class= "text-black text-sm font-medium hover:text-white" type="button"> Sign In </button>
+           <button class= "text-black text-sm font-medium hover:text-white" type="button">
+             <%= link "Sign In", to: Routes.auth_path(@conn, :request, "google") %>
+
+            </button>
           </li>
           <li class="mt-6 ml-4">
             <button class="bg-black  pb-1 w-24 h-9 text-sm rounded-full text-white " type="button"> Get started </button>
@@ -61,6 +64,6 @@
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= @inner_content %>
     </main>
-    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/landing.js") %>"></script>
+   <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/landing.js") %>"></script>
   </body>
 </html>

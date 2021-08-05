@@ -20,7 +20,7 @@ defmodule Medium.MixProject do
   def application do
     [
       mod: {Medium.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ueberauth_google, :ueberauth_twitter, :ueberauth_github]
     ]
   end
 
@@ -44,7 +44,13 @@ defmodule Medium.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:oauth2, "~> 2.0", override: true},
+      {:ueberauth, "~> 0.6"},
+      {:ueberauth_twitter, "~> 0.3.0"},
+      {:ueberauth_facebook, "~> 0.8"},
+      {:ueberauth_github, "~> 0.7"},
+      {:ueberauth_google, "~> 0.10.1"}
     ]
   end
 

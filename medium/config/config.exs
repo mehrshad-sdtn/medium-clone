@@ -29,3 +29,15 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
+
+
+config :ueberauth, Ueberauth,
+  providers: [
+    google: {Ueberauth.Strategy.Google, []},
+    github: {Ueberauth.Strategy.Github, []}
+  ]
+
+config :ueberauth, Ueberauth.Strategy.Google.OAuth,
+  client_id: "752093440540-4proo8ut7kmt6pl5sn8igo2o82o9jdub.apps.googleusercontent.com",
+  client_secret: "hieK-IjeySQL9QlffOJ5aDOR",
+  redirect_uri: "http://localhost:4000/auth/google/callback"
