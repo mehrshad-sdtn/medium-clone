@@ -33,7 +33,7 @@ import_config "#{Mix.env()}.exs"
 
 config :ueberauth, Ueberauth,
   providers: [
-    google: {Ueberauth.Strategy.Google, []},
+    google: {Ueberauth.Strategy.Google, [default_scope: "email profile"]},
     github: {Ueberauth.Strategy.Github, []}
   ]
 
