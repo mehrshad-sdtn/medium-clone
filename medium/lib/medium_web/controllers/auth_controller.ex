@@ -30,6 +30,13 @@ defmodule MediumWeb.AuthController do
 
   end
 
+  def signout(conn, _params) do
+
+    conn
+    |> configure_session(drop: true)
+    |> redirect(to: Routes.page_path(conn, :index))
+  end
+
   defp signin(conn, changeset) do
     #check if the user already exists or is signing up
     case insert_or_update(changeset) do
