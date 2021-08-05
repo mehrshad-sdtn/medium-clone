@@ -20,7 +20,7 @@
 
       <div class="container w-6/12 text-sm font-sans">
         <ul class= "float-right flex mr-14">
-          <li class="mt-6 ml-4">
+          <li class="mt-5 ml-4">
             <button class="p-1 bg-white w-24 h-9 text-sm rounded-full text-black border border-black hover:border-blue-400 hover:text-blue-400"
             type="button">
             <%= link "Sign Out", to: Routes.auth_path(@conn, :signout) %>
