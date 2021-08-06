@@ -23,7 +23,7 @@
         <ul class= "float-right flex mr-14">
           <li class="mt-7 ml-4">
            <button id="signin-btn" class= "text-black text-sm font-medium hover:text-white" type="button">
-             <%= link "Sign In", to: Routes.auth_path(@conn, :request, "google") %>
+              Sign In
 
             </button>
           </li>
@@ -67,12 +67,46 @@
     </main>
 
     <div id="modal" class= "w-full h-full sm:pt-4 sm:pb-4 bg-white flex justify-center items-center invisible" style="position: fixed; top: 0; left:0; background: rgba(255,255,255,0.75);">
-      <div class= "h-full w-full sm:w-8/12 shadow-2xl bg-white rounded-md flex justify-center pt-14">
-        <p class="font-serif text-2xl">
-          Welcome Back.
-        </p>
+      <div class= "h-full w-full sm:w-7/12 shadow-2xl bg-white rounded-md">
+          <button id="close-modal" type="button" class="float-right mr-4 mt-2 font-mono text-2xl text-gray-400 font-thin opacity-50"> X </button>
+
+          <div class= "flex flex-col items-center pt-14">
+            <p class="font-serif text-3xl">
+              Welcome back.
+            </p>
+
+            <div class= "w-5/12 mt-24 flex flex-col items-center font-sans text-sm">
+
+              <button type="button" class="rounded-full border border-gray-400 w-52 h-11 mb-6">
+                <img src="<%= Routes.static_path(@conn, "/images/google.png") %>" class="float-left ml-4" style="width:26px; height:26px;">
+                <span class="mr-5 mt-4 font-medium">
+                  <%= link "Sign in with Google", to: Routes.auth_path(@conn, :request, "google") %>
+                </span>
+              </button>
+
+              <button type="button" class="rounded-full border border-gray-400 w-52 h-11 mb-6">
+                <img src="<%= Routes.static_path(@conn, "/images/twitter.png") %>" class="float-left ml-3 mt-0" style="width:28px; height:28px;">
+                <span class="mr-5 mt-4 font-medium">Sign in with Twitter</span>
+              </button>
+
+              <button type="button" class="rounded-full border border-gray-400 w-52 h-11 mb-6">
+              <img src="<%= Routes.static_path(@conn, "/images/facebook.png") %>" class="float-left ml-3" style="width:26px; height:26px;">
+              <span class="mr-3 mt-4 font-medium">Sign in with Facebook</span>
+              </button>
+
+
+
+            <div>
+
+            <div class="mt-16">
+              <p> No account? <span class="font-medium text-green-600">Create one</span> </p>
+            </div>
+
+          </div>
+
       </div>
    </div>
+
    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/scroll.js") %>"></script>
    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/modal.js") %>"></script>
   </body>
