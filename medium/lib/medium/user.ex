@@ -8,6 +8,7 @@ defmodule Medium.User do
     field :last_name, :string
     field :provider, :string
     field :token, :string
+    has_many :stories, Medium.Story
     timestamps()
   end
 
